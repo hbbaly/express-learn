@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const logger = require('morgan')
 app.use(logger('dev'))
+// app.use(express.static('public'));
+app.use('/static', express.static('public'));
 // 示例中间件函数
 const middleware = (req, res, next) => {
   // ... 进行一些操作
